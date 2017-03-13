@@ -175,7 +175,7 @@ void Replay::Load(const wxString& filename)
 
 	m_description = (*this)["Id"].As<wxString>();
 
-	m_date.ParseFormat((*this)["Date"].As<wxString>(), wxS("%Y-%m-%d:%H-%M"));
+	m_date.ParseFormat((*this)["Date"].As<wxString>(), wxS("%Y-%m-%d %H-%M-%S"));
 
 	m_fps = (*this)["RecordFPS"].As<wxFloat32>();
 	if (find("NumFrames") != end())
